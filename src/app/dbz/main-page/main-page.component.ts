@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
+import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
 })
 export class MainPageComponent {
-  public nuevo: Personaje = {
-    nombre: 'Truncks',
-    poder: 14000,
-  };
+  public personajes: Personaje[] = [
+    {
+      nombre: 'Goku',
+      poder: 15000,
+    },
+    {
+      nombre: 'Vegeta',
+      poder: 7500,
+    },
+  ];
 
-  public agregar(): void {
-    console.log(this.nuevo);
-  }
+  public nuevo: Personaje = {
+    nombre: 'Maestro Roshi',
+    poder: 1000,
+  };
 }
